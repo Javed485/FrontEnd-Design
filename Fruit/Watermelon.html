@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Watermelon</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+		.shape{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) translateY(40px) rotate(25deg);
+			width: 320px;
+			height: 160px;
+			background-color: #ff395d;
+			border-left: 20px solid #92e256;
+			border-right: 20px solid #92e256;
+			border-bottom: 20px solid #92e256;
+			border-bottom-left-radius: 200px;
+			border-bottom-right-radius: 200px;
+		}
+		.shape::before{
+			content: '';
+			top: 0;
+			left: -20px;
+			position: absolute;
+			width: calc(50% + 20px);
+			height: calc(100% + 20px);
+			background-color: rgba(255,255,255,0.3);
+		}
+		span{
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: #262626;
+			border-radius: 50%;
+			display: inline-block;
+			margin: 17px;
+			position: relative;
+			left: 8.6%;
+		}
+		span:nth-child(11),
+		span:nth-child(15){
+			background-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="shape">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+
+	</div>
+</body>
+</html>

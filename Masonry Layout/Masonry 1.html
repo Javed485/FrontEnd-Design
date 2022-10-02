@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Masonry Container</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			/*background-color: #333;*/
+		}
+		.container{
+			background-color: #333;
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			columns: 4;
+			column-gap: 10px;
+		}
+		.container .box{
+			width: 100%;
+			margin: 0 0 10px;
+			padding: 10px;
+			background-color: #fff;
+			overflow: hidden;
+			break-inside: avoid;
+		}
+		.container .box img{
+			max-width: 100%;
+		}
+		.container .box h2{
+			margin: 10px 0;
+			padding: 0;
+			font-size: 20px;
+		}
+		.container .box p{
+			margin: 0;
+			/*padding: 0 10px;*/
+			font-size: 16px;
+		}
+		@media screen AND (max-width: 1200px)
+		{
+			.container
+			{
+				columns: 3;
+				width: calc(100% - 40px);
+				box-sizing: border-box;
+				padding: 20px;
+			}
+		}
+		@media screen AND (max-width: 768px)
+		{
+			.container
+			{
+				columns: 3;
+			}
+		}
+		@media screen AND (max-width: 480px)
+		{
+			.container
+			{
+				columns: 2;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Eaque aut officia fuga sit illum, earum eius est nobis facilis. Vel.</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ut ex soluta dignissimos aut, odio quae? Veritatis, autem quae repellendus dolorem et, temporibus omnis praesentium enim ates expedita excepturi nesciunt earum.</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ut ex soluta dignissimos aut, odio quae? Veritatis, autem quae repellendus dolorem et, temporibus omnis praesentium enim ad laudantium esse ex delectus minima ullam, voluptate.</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate ut ex soluta dignissimos aut, odio quae? Veritatis, autem quae repellendus dolorem et, temporibus omnis praesentium enim ad laudantium esse ex delectus minima ullam, voluptate. Voluptatibus voluptates expedita excepturi nesciunt earum.</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? consectetur adipisicing elit. Sit, quos?</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, possimus vero facilis. Voluptatum, minus quis iusto, commodi maiores doloremque! Harum!</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum dolor sit amet consectetur adipisicing, elit. Sapiente consectetur magnam inventore quia perspiciatis, autem assumenda corporis quos iusto repudiandae ducimus tempore asperiores ab error ipsam sequi labore quaerat facilis! Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, esse!</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, esse!</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, esse!</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, esse!</p>
+		</div>
+
+		<div class="box">
+			<img src="D:/Programs/Images/banner1_bg.jpg">
+			<h2>Title Goes Here</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, esse!</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.wrapper{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			padding: 70px 0;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		.menu,
+		.content{
+			width: 100%;
+		}
+		select{
+			width: 100%;
+			padding: 15px;
+			font-size: 16px;
+			font-weight: 700;
+			border: none;
+			border-radius: 8px;
+			border: 2px solid #3f51b5;
+			box-shadow: 0 15px 15px 3efefef;
+			appearance: none;
+			background: #e8eaf6 url() no-repeat;
+			background-position: 95% 55%;
+			background-size: 22px;
+		}
+		.content{
+			margin: 30px 0;
+		}
+		.content .data{
+			padding: 25px;
+			background-color: #fff;
+			border: 2px solid #8bc34a;
+			border-radius: 8px;
+		}
+		.content p{
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid gainsboro;
+		}
+		.content p:last-child{
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.content p b{
+			font-weight: 700;
+		}
+		.content p span{
+			float: right;
+			font-weight: normal;
+		}
+		.image{
+			text-align: center;
+		}
+		img{
+			width: 50%;
+			height: 50%;
+		}
+		.data{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<select id="name">
+				<option value="1">Deeps Verma</option>
+				<option value="2">Jatin Sharma</option>
+				<option value="3">Ayush Gupta</option>
+				<option value="4">Harshit Vashisth</option>
+				<option value="5">Wazid Ansari</option>
+				<option value="6">Kamal Singh</option>
+			</select>
+		</div>
+
+	<div class="content">
+		<div id="1" class="data">
+			<p class="image"><img src="../Images/team-img4.png"></p>
+			<p><b>Full Name</b><span>Deeps Verma</span></p>
+			<p><b>Email</b><span>deeps@123gmail.com</span></p>
+			<p><b>Phone</b><span>9887675423</span></p>
+			<p><b>Twitter</b><span>deeps@123twitter.in</span></p>
+			<p><b>Address</b><span>Uttar Pradesh</span></p>
+			<p><b>Website</b><span>www.deeps.com</span></p>
+		</div>
+		<div id="2" class="data">
+			<p><b>Full Name</b><span>Jatin Sharma</span></p>
+			<p><b>Email</b><span>jatin@123gmail.com</span></p>
+			<p><b>Phone</b><span>8756341123</span></p>
+			<p><b>Twitter</b><span>jatin@123twitter.in</span></p>
+			<p><b>Address</b><span>Delhi</span></p>
+			<p><b>Website</b><span>www.jatin.com</span></p>
+		</div>
+		<div id="3" class="data">
+			<p class="image"><img src="../Images/team-img3.png"></p>
+			<p><b>Full Name</b><span>Ayush Gupta</span></p>
+			<p><b>Email</b><span>ayush@123gmail.com</span></p>
+			<p><b>Phone</b><span>9136237689</span></p>
+			<p><b>Twitter</b><span>ayush@123twitter.in</span></p>
+			<p><b>Address</b><span>Haryana</span></p>
+			<p><b>Website</b><span>www.ayush.com</span></p>
+		</div>
+		<div id="4" class="data">
+			<p><b>Full Name</b><span>Harshit Vashisth</span></p>
+			<p><b>Email</b><span>harshit@123gmail.com</span></p>
+			<p><b>Phone</b><span>7687453421</span></p>
+			<p><b>Twitter</b><span>harshit@123twitter.in</span></p>
+			<p><b>Address</b><span>Rajashtan</span></p>
+			<p><b>Website</b><span>www.harshit.com</span></p>
+		</div>
+		<div id="5" class="data">
+			<p class="image"><img src="../Images/team-img2.png"></p>
+			<p><b>Full Name</b><span>Wazid Ansari</span></p>
+			<p><b>Email</b><span>wazid@123gmail.com</span></p>
+			<p><b>Phone</b><span>9899346527</span></p>
+			<p><b>Twitter</b><span>wazid@123twitter.in</span></p>
+			<p><b>Address</b><span>Guzrat</span></p>
+			<p><b>Website</b><span>www.wazid.com</span></p>
+		</div>
+		<div id="6" class="data">
+			<p class="image"><img src="../Images/team-img1.png"></p>
+			<p><b>Full Name</b><span>Kamal Singh</span></p>
+			<p><b>Email</b><span>kamal@123gmail.com</span></p>
+			<p><b>Phone</b><span>8860456324</span></p>
+			<p><b>Twitter</b><span>kamal@123twitter.in</span></p>
+			<p><b>Address</b><span>Mumbai</span></p>
+			<p><b>Website</b><span>www.kamal.com</span></p>
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#name').on('change',function(){
+				// alert($(this).val());
+				$('.data').hide();
+				$('#' + $(this).val()).fadeIn(700);
+			}).change();
+		});
+	</script>
+</body>
+</html>

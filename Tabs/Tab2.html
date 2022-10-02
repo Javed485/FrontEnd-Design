@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+		}
+		body{
+			background-color: #2a5163;
+		}
+		.hero{
+			width: 70%;
+			height: 70vh;
+			display: flex;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			overflow: hidden;
+		}
+		.tabs{
+			flex-basis: 21%;
+			background-color: #015247;
+		}
+		.content-box{
+			flex-basis: 79%;
+			background-color: #fff;
+		}
+		.tabs button{
+			width: 100%;
+			background: transparent;
+			border: 0;
+			outline: none;
+			padding: 18px 30px;
+			font-weight: bold;
+			color: #fff;
+			cursor: pointer;
+		}
+		#tab1{
+			background-color: #fff;
+			color: #000;
+		}
+		#content1,
+		#content2,
+		#content3,
+		#content4{
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			transform: translateY(100%);
+			transition: all 0.7s;
+		}
+		.content-text{
+			width: 80%;
+		}
+		.content-text h1{
+			color: #015247;
+			margin-bottom: 30px;
+		}
+		.content-text p{
+			font-size: 15px;
+		}
+		#content1{
+			transform: translateY(0);
+		}
+	</style>
+</head>
+<body>
+	<div class="hero">
+		<div class="tabs">
+			<button id="tab1">Statue of Unity</button>
+			<button id="tab2">Statue of India</button>
+			<button id="tab3">Statue of Unity</button>
+			<button id="tab4">Statue of Unity</button>
+		</div>
+		<div class="content-box">
+			<div id="content1">
+				<div class="content-text">
+					<h1>Statue of Unity</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Commodi eius maiores nisi officia esse ex rerum quod similique, in repellat ipsam, nam, aut suscipit, et atque velit temporibus accusantium. Est error ab, voluptatem odio? Magni, quod blanditiis inventore iusto, voluptatum unde iure quibusdam eos dolor consectetur perspiciatis id qui, sint?</p>
+				</div>
+			</div>
+			<div id="content2">
+				<div class="content-text">
+					<h1>Statue of India</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Commodi eius maiores nisi officia esse ex rerum quod similique, in repellat ipsam, nam, aut suscipit, et atque velit temporibus accusantium. Est error ab, voluptatem odio? Magni, quod blanditiis inventore iusto, voluptatum unde iure quibusdam eos dolor consectetur perspiciatis id qui, sint?</p>
+				</div>
+			</div>
+			<div id="content3">
+				<div class="content-text">
+					<h1>Statue of Unity</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Commodi eius maiores nisi officia esse ex rerum quod similique, in repellat ipsam, nam, aut suscipit, et atque velit temporibus accusantium. Est error ab, voluptatem odio? Magni, quod blanditiis inventore iusto, voluptatum unde iure quibusdam eos dolor consectetur perspiciatis id qui, sint?</p>
+				</div>
+			</div>
+			<div id="content4">
+				<div class="content-text">
+					<h1>Statue of Unity</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Commodi eius maiores nisi officia esse ex rerum quod similique, in repellat ipsam, nam, aut suscipit, et atque velit temporibus accusantium. Est error ab, voluptatem odio? Magni, quod blanditiis inventore iusto, voluptatum unde iure quibusdam eos dolor consectetur perspiciatis id qui, sint?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var tab1 = document.getElementById("tab1");
+		var tab2 = document.getElementById("tab2");
+		var tab3 = document.getElementById("tab3");
+		var tab4 = document.getElementById("tab4");
+		var content1 = document.getElementById("content1");
+		var content2 = document.getElementById("content2");
+		var content3 = document.getElementById("content3");
+		var content4 = document.getElementById("content4");
+
+		tab1.onclick = function(){
+			content1.style.transform = "translateY(0%)";
+			content2.style.transform = "translateY(100%)";
+			content3.style.transform = "translateY(100%)";
+			content4.style.transform = "translateY(100%)";
+
+			content1.style.transitionDelay = "0.3s";
+			content2.style.transitionDelay = "0";
+			content3.style.transitionDelay = "0";
+			content4.style.transitionDelay = "0";
+
+			tab1.style.background = "#fff";
+			tab2.style.background = "transparent";
+			tab3.style.background = "transparent";
+			tab4.style.background = "transparent";
+
+			tab1.style.color = "#000";
+			tab2.style.color = "#fff";
+			tab3.style.color = "#fff";
+			tab4.style.color = "#fff";
+		}
+		tab2.onclick = function(){
+			content1.style.transform = "translateY(100%)";
+			content2.style.transform = "translateY(0%)";
+			content3.style.transform = "translateY(100%)";
+			content4.style.transform = "translateY(100%)";
+
+			content1.style.transitionDelay = "0";
+			content2.style.transitionDelay = "0.3s";
+			content3.style.transitionDelay = "0";
+			content4.style.transitionDelay = "0";
+
+			tab1.style.background = "transparent";
+			tab2.style.background = "#fff";
+			tab3.style.background = "transparent";
+			tab4.style.background = "transparent";
+
+			tab1.style.color = "#fff";
+			tab2.style.color = "#000";
+			tab3.style.color = "#fff";
+			tab4.style.color = "#fff";
+		}
+		tab3.onclick = function(){
+			content1.style.transform = "translateY(100%)";
+			content2.style.transform = "translateY(100%)";
+			content3.style.transform = "translateY(0)";
+			content4.style.transform = "translateY(100%)";
+
+			content1.style.transitionDelay = "0";
+			content2.style.transitionDelay = "0";
+			content3.style.transitionDelay = "0.3s";
+			content4.style.transitionDelay = "0";
+
+			tab1.style.background = "transparent";
+			tab2.style.background = "transparent";
+			tab3.style.background = "#fff";
+			tab4.style.background = "transparent";
+
+			tab1.style.color = "#fff";
+			tab2.style.color = "#fff";
+			tab3.style.color = "#000";
+			tab4.style.color = "#fff";
+		}
+		tab4.onclick = function(){
+			content1.style.transform = "translateY(100%)";
+			content2.style.transform = "translateY(100%)";
+			content3.style.transform = "translateY(100%)";
+			content4.style.transform = "translateY(0)";
+
+			content1.style.transitionDelay = "0";
+			content2.style.transitionDelay = "0";
+			content3.style.transitionDelay = "0";
+			content4.style.transitionDelay = "0.3s";
+
+			tab1.style.background = "transparent";
+			tab2.style.background = "transparent";
+			tab3.style.background = "transparent";
+			tab4.style.background = "#fff";
+
+			tab1.style.color = "#fff";
+			tab2.style.color = "#fff";
+			tab3.style.color = "#fff";
+			tab4.style.color = "#000";
+		}
+	</script>
+</body>
+</html>

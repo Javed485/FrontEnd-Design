@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-5.1.3/css/bootstrap.css">
+	<title>Document</title>
+	<style type="text/css">
+		.grid-main{
+			margin-top: 25px;
+		}
+		.box-1{
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+		.bg-fffe55{
+			background-color: #fffe55;
+		}
+		.bg-success{
+			background-color: #54deee;
+		}
+		.bg-success{
+			background-color: #54deee;
+		}
+		.bg-success{
+			background-color: #54deee;
+		}
+		.bg-success{
+			background-color: #54deee;
+		}
+		.grid-box_style_1{
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+		.grid-box_style_1 .grid-content{
+			position: relative;
+			overflow: hidden;
+		}
+		.grid-box_style_1 .grid-content .title_top .grid-title{
+			top: 10px;
+		}
+		.grid-box_style_1 .grid-content .grid-title{
+			position: absolute;
+			left: 30px;
+			z-index: 2;
+			font-size: 25px;
+			text-transform: uppercase;
+			margin: 0;
+			color: #fff;
+			transform: all 0.5s ease-in-out;
+		}
+		/*.grid-box_style_1 img{
+			height: auto;
+		}*/
+		.grid-box_style_1 .grid-content .overlay-bg{
+			opacity: 0.9;
+			width: 40px;
+			height: 50px;
+			position: absolute;
+			left: 20px;
+			transition: all 0.5s ease-in-out;
+		}
+		.grid-box_style_1:hover .grid-content .overlay-bg{
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		.grid-box_style_1:hover .grid-content .grid-title{
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			bottom: auto;
+		}
+		@media screen AND (max-width: 767px){
+			.grid-box_style_1 .grid-content img{
+				height: auto;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="grid-main">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-3 box-1">
+					<div class="grid-box_style_1">
+						<div class="grid-content title_top">
+							<a href="">
+								<h3 class="grid-title">Frontend</h3>
+								<span class="overlay-bg bg-fffe55"></span>
+								<img src="../Images/news_img4.jpg" width="277" height="600">
+							</a>
+						</div>	
+					</div>	
+				</div>
+
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-sm-8 box-1">
+							<div class="grid-box_style_1">
+								<div class="grid-content title_top">
+									<a href="">
+										<h3 class="grid-title">Frontend</h3>
+										<span class="overlay-bg bg-success"></span>
+										<img src="../Images/news_img4.jpg" width="560" height="277">
+									</a>
+								</div>	
+							</div>
+						</div>
+
+						<div class="col-sm-4 box-1">
+							<div class="grid-box_style_1">
+								<div class="grid-content title_top">
+									<a href="">
+										<h3 class="grid-title">Frontend</h3>
+										<span class="overlay-bg bg-success"></span>
+										<img src="../Images/news_img4.jpg" width="277" height="277">
+									</a>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-4 box-1">
+							<div class="grid-box_style_1">
+								<div class="grid-content title_top">
+									<a href="">
+										<h3 class="grid-title">Frontend</h3>
+										<span class="overlay-bg bg-success"></span>
+										<img src="../Images/news_img4.jpg" width="277" height="285">
+									</a>
+								</div>	
+							</div>
+						</div>
+
+						<div class="col-sm-8 box-1">
+							<div class="grid-box_style_1">
+								<div class="grid-content title_top">
+									<a href="">
+										<h3 class="grid-title">Frontend</h3>
+										<span class="overlay-bg bg-success"></span>
+										<img src="../Images/news_img4.jpg" width="560" height="285">
+									</a>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

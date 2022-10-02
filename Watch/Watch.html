@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Watch</title>
+	<style type="text/css">
+		*{
+			top: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #262626;
+		}
+		.circle{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 200px;
+			height: 200px;
+			border: 15px solid #ff5f5f;
+			border-radius: 50%;
+			background-image: url(D:/Programs/Images/img-5.png);
+			background-size: cover;
+			box-shadow: -2px 2px 0 #e23232, inset 0 0 20px rgba(0,0,0,0.5);
+		}
+		.circle:before{
+			content: '';
+			position: absolute;
+			top: calc(50% - 3px);
+			left: 50%;
+			width: 40%;
+			height: 6px;
+			background-color: #262626;
+			border-radius: 3px;
+			animation: animate 4s linear infinite;
+			transform-origin: left;
+		}
+		.circle:after{
+			content: '';
+			position: absolute;
+			top: calc(50% - 3px);
+			left: 50%;
+			width: 30%;
+			height: 6px;
+			background-color: #262626;
+			border-radius: 3px;
+			animation: animate 48s linear infinite;
+			transform-origin: left;
+		}
+		@keyframes animate {
+			0%{
+				transform: rotate(-90deg);
+			}
+			100%{
+				transform: rotate(270deg);
+			}
+		}
+		span{
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 10px;
+			height: 10px;
+			background-color: #ff5f5f;
+			border-radius: 50%;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle">
+		<span></span>
+	</div>
+</body>
+</html>

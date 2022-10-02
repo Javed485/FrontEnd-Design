@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			align-items: center;
+			justify-content: center;
+		}
+		.container{
+			position: relative;
+			width: 800px;
+			height: auto;
+			margin: 180px auto;
+			box-sizing: border-box;
+		}
+		ul{
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			border-top: 2px solid #348dff;
+		}
+		ul li{
+			list-style: none;
+			display: inline;
+		}
+		ul li a{
+			display: inline-block;
+			width: 19.5%;
+			height: 50px;
+			line-height: 55px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		ul li a .fa{
+			color: #348dff;
+			font-size: 30px;
+		}
+		ul li a.active{
+			background-color: #348dff;
+		}
+		ul li a.active .fa{
+			color: #fff;
+		}
+		ul li .box{
+			position: absolute;
+			top: 50px;
+			display: none;
+			padding: 20px;
+			box-sizing: border-box;
+			background: #348dff;
+		}
+		ul li .box h1{
+			margin: 0;
+			padding: 0 0 15px;
+			font-size: 24px;
+			color: #fff;
+			font-weight: normal;
+			border-bottom: 2px solid #fff;
+		}
+		ul li .box p{
+			color: #fff;
+		}
+		ul li .box.active{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul id="accordion">
+			<li>
+				<a href="#" class="active"><i class="fa fa-gift" aria-hidden="true"></i></a>
+				<div class="box active">
+					<h1>Gift</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Eius ad debitis porro fuga modi in, quae a inventore dolore ipsam.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-glass" aria-hidden="true"></i></a>
+				<div class="box">
+					<h1>Glass</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Eius ad debitis porro fuga modi in, quae a inventore dolore ipsam.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+				<div class="box">
+					<h1>Globe</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Eius ad debitis porro fuga modi in, quae a inventore dolore ipsam.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+				<div class="box">
+					<h1>Graduation cap</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Eius ad debitis porro fuga modi in, quae a inventore dolore ipsam.</p>
+				</div>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-users" aria-hidden="true"></i></a>
+				<div class="box">
+					<h1>Users</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Eius ad debitis porro fuga modi in, quae a inventore dolore ipsam.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on('click','#accordion>li>a',function(){
+				$(this).siblings('.box').addClass('active');
+				$(this).closest('li').siblings('li').find('.box').removeClass('active');
+			})
+			$('#accordion').on('click','li>a',function(){
+				$('#accordion li a.active').removeClass('active');
+				$(this).addClass('active');
+			})
+		})
+	</script>
+</body>
+</html>

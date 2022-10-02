@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		:root{
+			--orange: linear-gradient(45deg, orange, coral);
+			--dark-grey:  rgb(160,160,160);
+			--light-grey: rgb(240,240,240);
+			--green: rgb(0,180,0);
+			--white: rgb(255,255,255);
+			--line: 1.5px solid rgb(220,220,220);
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.2rem;
+			background-image: var(--orange);
+		}
+		.accordion{
+			width: 60vw;
+			background-color: var(--white);
+			border-bottom: var(--line);
+			overflow: hidden;
+			transition: 0.3s;ease-out;
+		}
+		.accordion.active{
+			margin: 0.5rem 0;
+			border-radius: 0.5rem !important;
+		}
+		.accordion:first-child{
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		.accordion:last-child{
+			border-radius: 0 0 0.5rem 0.5rem;
+		}
+		.accordion-header{
+			padding: 1rem 1.5rem;
+		}
+		.accordion-header.active,
+		.accordion-header:hover{
+			background-color: var(--light-grey);
+		}
+		.accordion-header h1{
+			font-size: 1.2rem;
+		}
+		.number{
+			font: 500 1.5rem sans-serif;
+			color: var(--green);
+			margin-right: 1.5rem;
+		}
+		.icon{
+			color: var(--dark-grey);
+			font: bolder 1.3rem sans-serif;
+			float: right;
+			margin-right: 1.5rem;
+			cursor: pointer;
+		}
+		.panel{
+			height: 0;
+			overflow: hidden;
+			font-size: .9rem;
+			transition: 0.2s ease-out;
+		}
+		.panel-body{
+			padding: 2.5rem 1.5rem;
+		}
+		.panel-footer{
+			padding: 1rem 1.5rem;
+			text-align: right;
+			border-top: var(--line);
+		}
+		.btn{
+			padding: 0.8rem 1.4rem;
+			border: none;
+			border-radius: 0.4rem;
+			cursor: pointer;
+		}
+		.btn-success{
+			background-color: var(--green);
+			cursor: var(--white);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="accordion">
+			<div class="accordion-header">
+				<span class="icon">&#9873;</span>
+				<span class="icon">&#10084;</span>
+				<h1><span class="number">&#10102</span>Web Development</h1>
+				<div class="panel">
+					<div class="panel-body">
+						<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo id, rem aliquid laborum, vitae deserunt minima dolor atque eum eius, optio delectus ea quibusdam modi perspiciatis suscipit exercitationem voluptatem.</p>
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-success">Read More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion">
+			<div class="accordion-header">
+				<span class="icon">&#9873;</span>
+				<span class="icon">&#10084;</span>
+				<h1><span class="number">&#10103</span>Web Development</h1>
+				<div class="panel">
+					<div class="panel-body">
+						<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo id, rem aliquid laborum, vitae deserunt minima dolor atque eum eius, optio delectus ea quibusdam modi perspiciatis suscipit exercitationem voluptatem.</p>
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-success">Read More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion">
+			<div class="accordion-header">
+				<span class="icon">&#9873;</span>
+				<span class="icon">&#10084;</span>
+				<h1><span class="number">&#10104</span>Web Development</h1>
+				<div class="panel">
+					<div class="panel-body">
+						<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Numquam nemo id, rem aliquid laborum, vitae deserunt minima dolor atque eum eius, optio delectus ea quibusdam modi perspiciatis suscipit exercitationem voluptatem.</p>
+					</div>
+					<div class="panel-footer">
+						<button class="btn btn-success">Read More</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<script type="text/javascript">
+		const accordions = document.querySelectorAll('.accordion');
+
+		for(accordion of accordions){
+			accordion.onclick = function(){
+				this.classList.toggle('active');
+				this.firstElementChild.classList.toggle('active');
+
+				let panel = this.lastElementChild;
+
+				if(panel.style.height){
+					panel.style.height = null;
+				}else{
+					panel.style.height = panel.scrollHeight + 'px'
+				}
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

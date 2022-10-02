@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Masonry </title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.masonry{
+			columns: 4;
+			column-gap: 8px;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+		}
+		.grid-image{
+			display: inline;
+			margin-bottom: 16px;
+			position: relative;
+		}
+		@media screen AND(max-width: 768px){
+			.masonry{
+				columns: 2;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="masonry">
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+		<div class="grid-image">
+			<img src="D:/programs/Images/deals-bg.jpg">
+		</div>
+	</div>
+</body>
+</html>

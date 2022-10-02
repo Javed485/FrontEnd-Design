@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Masonry with Hover</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		/*body{
+			display: flex;
+			justify-content: center;
+			align-self: center;
+			min-height: 100vh;
+			background-color: #222;
+		}*/
+		.container{
+			position: relative;
+			max-width: 100%;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			grid-template-rows: minmax(100px, auto);
+			margin: 10px;
+			grid-auto-flow: dense;
+			grid-gap: 10px;
+		}
+		.container .box{
+			background-color: #333;
+			padding: 20px;
+			display: grid;
+			font-size: 20px;
+			place-items: center;
+			text-align: center;
+			color: #fff;
+			transition: 0.5s;
+		}
+		.container .box:hover{
+			background-color: #e91e63;
+		}
+		.container .box img{
+			position: relative;
+			width: 100%;
+			margin-bottom: 10px;
+			height: 100%;
+		}
+		.container .box:nth-child(1){
+			grid-column: span 2;
+			grid-row: span 1;
+		}
+		.container .box:nth-child(2){
+			grid-column: span 1;
+			grid-row: span 2;
+		}
+		/*.container .box:nth-child(3){
+			grid-column: span 1;
+			grid-row: span 1;
+		}*/
+		.container .box:nth-child(4){
+			grid-column: span 1;
+			grid-row: span 2;
+		}
+		/*.container .box:nth-child(5){
+			grid-column: span 1;
+			grid-row: span 1;
+		}*/
+		/*.container .box:nth-child(6){
+			grid-column: span 1;
+			grid-row: span 1;
+		}*/
+		/*.container .box:nth-child(7){
+			grid-column: span 1;
+			grid-row: span 1;
+		}*/
+		.container .box:nth-child(8){
+			grid-column: span 2;
+			grid-row: span 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+
+		<div class="box">
+			<div class="content">
+				<img src="D:/programs/Images/blog_slide_img1.jpg">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, debitis.</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

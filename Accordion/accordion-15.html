@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/js/all.min.js">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			display: flex;
+			align-items: center;
+			min-height: 100vh;
+			background: #7d2ae8;
+			justify-content: center;
+			padding: 40px;
+		}
+		.accordion{
+			display: flex;
+			max-width: 1010px;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #fff;
+			border-radius: 25px;
+			padding: 45px 90px 45px 60px;
+		}
+		.accordion .imagebox{
+			height: 360px;
+			width: 300px;
+		}
+		.accordion .imagebox img{
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+		}
+		.accordion .accordion-text{
+			width: 60%;
+		}
+		.accordion .accordion-text .title{
+			font-size: 35px;
+			font-weight: 600;
+			color: #7d2ae8;
+		}
+		.accordion .accordion-text .faq-text{
+			margin-top: 25px;
+			height: 263px;
+			overflow-y: auto;
+		}
+		/*.faq-text::-webkit-scrollbar{
+			display: none;
+		}*/
+		.accordion .accordion-text li{
+			list-style: none;
+			cursor: pointer;
+		}
+		.accordion .accordion-text li .question-arrow{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.accordion-text li .question-arrow .question{
+			font-size: 18px;
+			font-weight: 500;
+			color: #595959;
+			transition: all 0.3s ease;
+		}
+		.accordion-text li .question-arrow .arrow{
+			font-size: 20px;
+			color: #595959;
+			transition: all 0.3s ease;
+		}
+		.accordion-text li.showAnswer .question-arrow .arrow{
+			transform: rotate(-180deg);
+		}
+		.accordion-text li:hover .question-arrow .question,
+		.accordion-text li:hover .question-arrow .arrow{
+			color: #7d2ae8;
+		}
+		.accordion-text li:showAnswer .question-arrow .question,
+		.accordion-text li:showAnswer .question-arrow .arrow{
+			color: #7d2ae8;
+		}
+		.accordion .accordion-text li .line{
+			display: block;
+			height: 2px;
+			width: 100%;
+			margin: 10px 0;
+			background-color: rgba(0,0,0,0.1);
+		}
+		.accordion-text li p{
+			width: 92%;
+			font-size: 15px;
+			font-weight: 500;
+			color: #595959;
+			display: none;
+			padding: 10px;
+		}
+		.accordion-text li.showAnswer p{
+			display: block;
+		}
+		@media screen AND(max-width: 994px){
+			body{
+				padding: 40px 20px;
+			}
+			.accordion{
+				max-width: 100%;
+				padding: 45px 60px 45px 60px;
+			}
+			.accordion .imagebox{
+				height: 360px;
+				width: 220px;
+			}
+			.accordion .accordion-text{
+				width: 63%
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<div class="imagebox">
+			<img src="../Images/blog_img3.jpg">
+		</div>
+		<div class="accordion-text">
+			<div class="title">FAQ</div>
+		
+		<ul class="faq-text">
+			<li>
+				<div class="question-arrow">
+					<span class="question">Question 1 Lorem ipsum dolor sit amet.gfgfdg thryhthg</span>
+					<i class="fa fas-chevron-down arrow"></i>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptates, commodi voluptatum quos dolorem odio nemo? Voluptate, laudantium id veniam natus, minima a rerum hic eaque possimus ullam aliquid, quos at.</p>
+				<span class="line"></span>
+			</li>
+			<li>
+				<div class="question-arrow">
+					<span class="question">Question 2</span>
+					<i class="fa fas-chevron-down arrow"></i>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptates, commodi voluptatum quos dolorem odio nemo? Voluptate, laudantium id veniam natus, minima a rerum hic eaque possimus ullam aliquid, quos at.</p>
+				<span class="line"></span>
+			</li>
+			<li>
+				<div class="question-arrow">
+					<span class="question">Question 3</span>
+					<i class="fa fas-chevron-down arrow"></i>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptates, commodi voluptatum quos dolorem odio nemo? Voluptate, laudantium id veniam natus, minima a rerum hic eaque possimus ullam aliquid, quos at.</p>
+				<span class="line"></span>
+			</li>
+			<li>
+				<div class="question-arrow">
+					<span class="question">Question 4</span>
+					<i class="fa fas-chevron-down arrow"></i>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptates, commodi voluptatum quos dolorem odio nemo? Voluptate, laudantium id veniam natus, minima a rerum hic eaque possimus ullam aliquid, quos at.</p>
+				<span class="line"></span>
+			</li>
+			<li>
+				<div class="question-arrow">
+					<span class="question">Question 5</span>
+					<i class="fa fas-chevron-down arrow"></i>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Voluptates, commodi voluptatum quos dolorem odio nemo? Voluptate, laudantium id veniam natus, minima a rerum hic eaque possimus ullam aliquid, quos at.</p>
+				<span class="line"></span>
+			</li>
+		</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let li = document.querySelectorAll(".faq-text li");
+		// console.log(li)
+		for(var i = 0; i < li.length; i++){
+			li[i].addEventListener("click",(e)=>{
+				// console.log(e.target);
+				let clickedLi;
+
+				if(e.target.classList.contains("question-arrow")){
+					clickedLi = e.target.parentElement;
+				}else{
+					clickedLi = e.target.parentElement.parentElement;
+				}
+				clickedLi.classList.toggle("showAnswer");
+			});
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+

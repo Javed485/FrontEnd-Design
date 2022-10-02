@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			list-style: none;
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #7a75d1;
+		}
+		.wrapper{
+			width: 850px;
+			margin: 200px auto;
+		}
+		.main_title{
+			font-size: 32px;
+			color: #fff;
+			width: 700px;
+			margin: 0 auto 25px;
+			background: #edc856;
+			border-radius: 3px;
+			text-align: center;
+			letter-spacing: 2px;
+			padding: 15px 25px;
+		}
+		.accordion_wrap ul{
+			display: flex;
+			justify-content: center;
+		}
+		.accordion_wrap ul li .accordion_item{
+			width: 100px;
+			height: 175px;
+			background-color: #edc856;
+			border-right: 1px solid #a48d2d;
+			cursor: pointer;
+			position: relative;
+			transition: all 0.2s linear;
+		}
+		.accordion_wrap ul li .accordion_item:hover,
+		.accordion_wrap ul li.active .accordion_item{
+			background-color: #a48d2d;
+			border-right: 1px solid #edc856;
+		}
+		.accordion_wrap ul li:first-child .accordion_item{
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		.accordion_wrap ul li:last-child .accordion_item{
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-right: none;
+		}
+		.accordion_wrap ul li .icon{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			background: url();
+		}
+		.accordion_wrap ul li.walk .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.bicycle .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.bike .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.car .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.train .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.aeroplane .icon{
+			background-position: 0 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.walk:hover .icon,
+		.accordion_wrap ul li.walk.active .icon{
+			background-position: -57px 0;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.bicycle:hover .icon,
+		.accordion_wrap ul li.bicycle.active .icon{
+			background-position: -57 -56px;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.bike:hover .icon,
+		.accordion_wrap ul li.bike.active .icon{
+			background-position: -57px -96px;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.car:hover .icon,
+		.accordion_wrap ul li.car.active .icon{
+			background-position: -57px -141px;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.train:hover .icon,
+		.accordion_wrap ul li.train.active .icon{
+			background-position: -57px -178px;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li.aeroplane:hover .icon,
+		.accordion_wrap ul li.aeroplane.active .icon{
+			background-position: -57px -224px;
+			width: 43px;
+			height: 43px;
+		}
+		.accordion_wrap ul li{
+			display: flex;
+		}
+		.accordion_main{
+			width: 0;
+			height: 175px;
+			background-color: #fffaeb;
+			color: #a48d2d;
+			overflow: hidden;
+			transition: width 0.2s ease;
+		}
+		.accordion_wrap ul li.active .accordion_main{
+			width: 250px;
+		}
+		.accordion_main .inner-box{
+			padding: 15px;
+		}
+		.accordion_main .title{
+			font-weight: 600;
+		}
+		.accordion_main .content{
+			font-size: 13px;
+			font-weight: 300;
+			margin: 10px 0;
+		}
+		.accordion_main .view_more{
+			padding: 5px;
+			background: #a48d2d;
+			color: #fffaeb;
+			width: 125px;
+			border-radius: 3px;
+			text-align: center;
+			font-size: 13px;
+		}
+		.accordion_main .view_more:hover{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main_title">
+			Means of Transportation
+		</div>
+
+		<div class="accordion_wrap">
+			<ul>
+				<li class="walk">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Walk</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+				<li class="bicycle">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Bicycle</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+				<li class="bike">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Bike</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+				<li class="car">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Car</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+				<li class="train">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Train</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+				<li class="aeroplane">
+					<div class="accordion_item">
+						<div class="icon"></div>
+					</div>
+					<div class="accordion_main">
+						<div class="inner-box">
+							<div class="title">Aeroplane</div>
+							<div class="content">
+								Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Fugit ratione nihil in magnam quam animi iure accusantium quisquam. Nam, corrupti. Iusto amet, voluptates.
+							</div>
+							<div class="view_more">View More</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var li_items = document.querySelectorAll(".accordion_wrap ul li");
+		var ul_item = document.querySelector(".accordion_wrap ul");
+
+		li_items.forEach(function(item){
+			// console.log(item);
+			item.addEventListener("mouseover",function(){
+				li_items.forEach(function(item){
+					item.classList.remove("active");
+				})
+				item.classList.add("active");
+			})
+		})
+		ul_item.addEventListener("mouseleave", function(){
+			li_items.forEach(function(item){
+					item.classList.remove("active");
+			})
+		})
+	</script>
+</body>
+</html>

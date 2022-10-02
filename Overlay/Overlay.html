@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #262626;
+			font-family: sans-serif;
+		}
+		.container{
+			width: 1280px;
+			min-height: 500px;
+			/*background-color: #fff;*/
+			margin: 70px auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.container .box{
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: #ff0;
+			margin: 10px;
+			box-sizing: border-box;
+			display: inline-block;
+		}
+		.image-box{
+			position: relative;
+			overflow: hidden;
+		}
+		.image-box img{
+			max-width: 100%;
+			min-height: 300px;
+			transition: transform 2s;
+		}
+		.container .box:hover img{
+			transform: scale(1.2);
+		}
+		.container .box .detail{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			bottom: 10px;
+			right: 10px;
+			background-color: rgba(0, 0, 0, 0.8);
+			transform: scaleY(0);
+			transition: transfrom .5s;
+		}
+		.container .box:hover .detail{
+			transform: scaleY(1);
+		}
+		.content{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			text-align: center;
+			padding: 15px;
+			color: #fff;
+		}
+		h2{
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			color: #ff0;
+		}
+		h2{
+			margin: 10px 0px;
+			padding: 0;
+		}
+	</style>	
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="image-box">
+				<img src="../Images/fleet-gallery1.jpg">
+			</div>
+			<div class="detail">
+				<div class="content">
+					<h2>Heading</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam placeat doloremque, nemo aut enim, nam similique sapiente ducimus reprehenderit repudiandae.</p>
+				</div>	
+			</div>
+		</div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+</body>
+</html>

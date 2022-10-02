@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			align-items: center !important;
+			justify-content: center !important;
+			background-color: #eee;
+		}
+		.container{
+			position: relative;
+			max-width: 968px;
+			/*height: auto;*/
+			margin: 0px auto;
+			box-sizing: border-box;
+			/*border: 1px solid black;*/
+		}
+		.accordion{
+			display: grid;
+			align-content: center;
+			height: 100vh;
+		}
+		.accordion_container{
+			display: grid;
+			row-gap: .75rem;
+			padding: 2rem 1rem;
+			background-color: pink;
+			border-radius: 0.5rem;
+			box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+		}
+		.accordion_title{
+			font-size: 25px;
+			color: red;
+			font-weight: 400;
+			margin-top: 0.15rem;
+			transition: 0.2s;
+		}
+		.accordion_header{
+			display: flex;
+			column-gap: 0.5rem;
+			padding: 1.25rem 1.25rem 1rem;
+			cursor: pointer;
+		}
+		.accordion_description{
+			padding: 0 1.25rem 1.25rem 3rem;
+			font-size: 17px;
+		}
+		.accordion_icon{
+			font-size: 1.5rem;
+			height: max-content;
+			color: #000;
+			transition: 0.3s;
+		}
+		.accordion_item:nth-child(1){
+			box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
+			background-color: lightyellow;
+			border-radius: 0.25rem;
+			position: relative;
+			transition: all 0.25s ease;
+		}
+		.accordion_item:nth-child(2){
+			box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
+			background-color: lightblue;
+			border-radius: 0.25rem;
+			position: relative;
+			transition: all 0.25s ease;
+		}
+		.accordion_item:nth-child(3){
+			box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
+			background-color: lightgreen;
+			border-radius: 0.25rem;
+			position: relative;
+			transition: all 0.25s ease;
+		}
+		.accordion_item:nth-child(4){
+			box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
+			background-color: skyblue;
+			border-radius: 0.25rem;
+			position: relative;
+			transition: all 0.25s ease;
+		}
+		.accordion_item:nth-child(1)::after{
+			content: '';
+			background-color: yellow;
+			width: 5px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
+		.accordion_item:nth-child(2)::after{
+			content: '';
+			background-color: blueviolet;
+			width: 5px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
+		.accordion_item:nth-child(3)::after{
+			content: '';
+			background-color: green;
+			width: 5px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
+		.accordion_item:nth-child(4)::after{
+			content: '';
+			background-color: blue;
+			width: 5px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
+		.accordion_content{
+			overflow: hidden;
+			height: 0;
+			transition: all 0.25s ease;
+		}
+		.accordion_open .accordion_icon{
+			transform: rotate(45deg);
+		}
+		.accordion_open .accordion_title{
+			font-weight: 600;
+		}
+		@media screen AND(min-width: 576px){
+			.container{
+				width: 550px;
+				padding: 2.5rem;
+				justify-self: center;
+				border-radius: 0.75rem;
+			}
+			.accordion_header{
+				padding: 1.5rem;
+			}
+			.accordion_title{
+				padding-right: 3.5rem;
+			}
+			.accordion_description{
+				padding: 0 4rem 1.25rem 3.5rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="accordion container">
+		<div class="accordion_container">
+			<div class="accordion_item">
+				<header class="accordion_header">
+					<i class="fa fa-plus accordion_icon"></i>
+					<h3 class="accordion_title">Title 1</h3>
+				</header>
+				<div class="accordion_content">
+					<p class="accordion_description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, obcaecati voluptas voluptatum corporis quas amet unde voluptatem, aspernatur tempora illo, impedit iure reprehenderit. Error nesciunt aliquam ducimus earum dolores cum.
+					</p>
+				</div>
+			</div>
+
+			<div class="accordion_item">
+				<header class="accordion_header">
+					<i class="fa fa-plus accordion_icon"></i>
+					<h3 class="accordion_title">Title 2</h3>
+				</header>
+				<div class="accordion_content">
+					<p class="accordion_description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, obcaecati voluptas voluptatum corporis quas amet unde voluptatem, aspernatur tempora illo, impedit iure reprehenderit. Error nesciunt aliquam ducimus earum dolores cum.
+					</p>
+				</div>
+			</div>
+
+			<div class="accordion_item">
+				<header class="accordion_header">
+					<i class="fa fa-plus accordion_icon"></i>
+					<h3 class="accordion_title">Title 3</h3>
+				</header>
+				<div class="accordion_content">
+					<p class="accordion_description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, obcaecati voluptas voluptatum corporis quas amet unde voluptatem, aspernatur tempora illo, impedit iure reprehenderit. Error nesciunt aliquam ducimus earum dolores cum.
+					</p>
+				</div>
+			</div>
+
+			<div class="accordion_item">
+				<header class="accordion_header">
+					<i class="fa fa-plus accordion_icon"></i>
+					<h3 class="accordion_title">Title 3</h3>
+				</header>
+				<div class="accordion_content">
+					<p class="accordion_description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, obcaecati voluptas voluptatum corporis quas amet unde voluptatem, aspernatur tempora illo, impedit iure reprehenderit. Error nesciunt aliquam ducimus earum dolores cum.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		const accordionItems = document.querySelectorAll('.accordion_item');
+
+		accordionItems.forEach((item) =>{
+			const accordionHeader = item.querySelector('.accordion_header');
+
+			accordionHeader.addEventListener('click',() =>{
+				// console.log('click')
+				const openItem = document.querySelector('accordion-open')
+				toggleItem(item)
+
+				if(openItem && openItem!== item){
+					toggleItem(openItem)
+				}
+			})
+
+		})
+
+		const toggleItem = (item) =>{
+			const accordionContent = item.querySelector('.accordion_content');
+
+			if(item.classList.contains('accordion-open')){
+				accordionContent.removeAttribute('style')
+				item.classList.remove('accordion-open')
+			}else{
+				accordionContent.style.height = accordionContent.scrollHeight + 'px'
+				item.classList.add('accordion-open')
+			}
+		}
+	</script>
+</body>
+</html>

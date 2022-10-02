@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Card</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #2f363e;
+		}
+		.container{
+			position: relative;
+			width: 350px;
+			min-height: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #2f363e;
+			box-shadow: 25px 25px 75px rgba(0,0,0,0.25),10px 10px 70px rgba(0,0,0,0.25), inset 5px 5px 10px rgba(0,0,0,0.5), inset 5px 5px 20px rgba(255,255,255,0.2), inset -5px -5px 15px rgba(0,0,0,0.75);
+			border-radius: 30px;
+			padding: 50px;
+		}
+		form{
+			position: relative;
+			width: 100%;
+		}
+		.container h3{
+			color: #fff;
+			font-weight: 600;
+			font-size: 2em;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 30px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		.Inputbox{
+			position: relative;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.Inputbox span{
+			display: inline-block;
+			color: #fff;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.75em;
+			border-left: 4px solid #fff;
+			padding-left: 4px;
+			line-height: 1em;
+		}
+		.Inputbox .Box{
+			display: flex;
+		}
+		.Inputbox .Box .icon{
+			position: relative;
+			min-width: 40px;
+			height: 40px;
+			background-color: #ff2c74;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			margin-right: 10px;
+			color: #fff;
+			font-size: 1.15em;
+			box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px rgba(255,255,225,0.75), inset -3px -3px 5px rgba(0,0,0,0.25);
+		}
+		.Inputbox .Box input{
+			position: relative;
+			width: 100%;
+			border: none;
+			outline: none;
+			padding: 10px 20px;
+			border-radius: 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.85em;
+			box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px rgba(255,255,225,0.35), inset -3px -3px 5px rgba(0,0,0,0.5);
+		}
+		.Inputbox .Box input[type="submit"]{
+			background-color: #1f82f2;
+			color: #fff;
+			/*cursor: point;*/
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: 600;
+			margin-top: 10px;
+			box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px rgba(255,255,225,0.25), inset -3px -3px 5px rgba(0,0,0,0.5);
+		}
+		.Inputbox .Box input[type="submit"]:hover{
+			filter: brightness(1.1);
+		}
+		label{
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.85em;
+			display: flex;
+			align-items: center;
+		}
+		label input{
+			margin-right: 5px;
+		}
+		.forget{
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 0.85em;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<form>
+		<h3>Log In</h3>
+		<div class="Inputbox">
+			<span>Username</span>
+			<div class="Box">
+				<div class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+				<input type="text" name="">
+			</div>
+		</div>
+		<div class="Inputbox">
+			<span>Password</span>
+			<div class="Box">
+				<div class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+				<input type="password" name="">
+			</div>
+		</div>
+		<label>
+			<input type="checkbox" name="">Remember me
+		</label>
+		<div class="Inputbox">
+			<div class="Box">
+				<!-- <div class="icon"></div> -->
+				<input type="submit" value="log in">
+			</div>
+		</div>
+		<a href="" class="forget">Forget Password</a>
+	</form>
+</div>
+</body>
+</html>

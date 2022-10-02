@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			font-family: sans-serif;
+			scroll-behavior: smooth;
+		}
+		.wrapper{
+			max-width: 700px;
+			padding: 0 20px;
+		}
+		.wrapper .parent-tab,
+		.wrapper .child-tab{
+			margin-bottom: 8px;
+			border-radius: 3px;
+			box-shadow: 0 0 15px rgba(0, 0, 0,0.18);
+		}
+		.wrapper .parent-tab label,
+		.wrapper .child-tab label{
+			background-color: #007bff;
+			padding: 10px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+			border-radius: 3px;
+			position: relative;
+			z-index: 99;
+		}
+		.wrapper label span{
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			box-shadow: 0 -1px 1px #0056b3;
+		}
+		.child-tab label span{
+			font-size: 16px;
+		}
+		.wrapper label .icon{
+			position: relative;
+			height: 30px;
+			width: 30px;
+			color: #007bff;
+			font-size: 15px;
+			display: block;
+			background-color: #fff;
+			border-radius: 50%;
+			text-shadow: 0 -1px 1px #0056b3;
+		}
+		.parent-tab input:checked ~ label .icon i::before,
+		.child-tab input:checked ~ label .icon i::before{
+			content: '\f068';
+		}
+		.wrapper label .icon i{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.wrapper .parent-tab .content,
+		.wrapper .child-tab .sub-content{
+			max-height: 0px;
+			overflow: hidden;
+			transition: all 0.8s ease;
+		}
+		.parent-tab input:checked ~ .content,
+		.child-tab input:checked ~ .sub-content{
+			max-height: 100vh;
+		}
+		.tab-3 input:checked ~ .content{
+			padding: 15px 20px;
+		}
+		.wrapper .parent-tab .content p,
+		.wrapper .child-tab .sub-content p{
+			font-size: 16px;
+			padding: 15px 20px;
+		}
+		.wrapper input{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="parent-tab">
+			<input type="radio" name="tab" id="tab-1" checked>
+			<label for="tab-1">
+				<span>Accordion Heading One</span>
+				<div class="icon"><i class="fas fa-plus"></i></div>
+			</label>
+			<div class="content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p>
+			</div>
+		</div>
+
+		<div class="parent-tab">
+			<input type="radio" name="tab" id="tab-2">
+			<label for="tab-2">
+				<span>Accordion Heading Two</span>
+				<div class="icon"><i class="fas fa-plus"></i></div>
+			</label>
+			<div class="content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p>
+			</div>
+		</div>
+
+		<div class="parent-tab tab-3">
+			<input type="radio" name="tab" id="tab-3">
+			<label for="tab-3">
+				<span>Accordion Heading Three</span>
+				<div class="icon"><i class="fas fa-plus"></i></div>
+			</label>
+			<div class="content">
+				<div class="child-tab">
+					<input type="checkbox" id="tab-4">
+					<label for="tab-4">
+						<span>Accordion Sub-Heading One</span>
+						<div class="icon"><i class="fas fa-plus"></i></div>
+					</label>
+					<div class="sub-content">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p>
+					</div>
+				</div>
+
+				<div class="child-tab">
+					<input type="checkbox" id="tab-5">
+					<label for="tab-5">
+						<span>Accordion Sub-Heading Two</span>
+						<div class="icon"><i class="fas fa-plus"></i></div>
+					</label>
+					<div class="sub-content">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p>
+					</div>
+				</div>
+
+				<!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p> -->
+			</div>
+		</div>
+
+		<div class="parent-tab">
+			<input type="radio" name="tab" id="tab-6">
+			<label for="tab-6">
+				<span>Accordion Heading Four</span>
+				<div class="icon"><i class="fas fa-plus"></i></div>
+			</label>
+			<div class="content">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum nesciunt voluptatibus expedita assumenda esse ipsa atque nam dolorem est omnis odit, totam quos eligendi, quibusdam ipsum repudiandae ipsam quis debitis?</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

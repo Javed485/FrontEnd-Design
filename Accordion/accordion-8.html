@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.container{
+			max-width: 900px;
+			margin: 50px auto;
+			padding: 0 20px;
+		}
+		.slides{
+			width: 100%;
+			display: flex;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		.slide{
+			list-style-type: none;
+			min-height: 400px;
+			width: 5%;
+			overflow: hidden;
+			transition: all 500ms linear;
+		}
+		.brand-1{
+			background-color: red;
+		}
+		.brand-2{
+			background-color: purple;
+		}
+		.brand-3{
+			background-color: green;
+		}
+		.brand-4{
+			background-color: orange;
+		}
+		.brand-5{
+			background-color: yellow;
+		}
+		.slide .action{
+			display: block;
+			height: 100%;
+			position: relative;
+		}
+		.slide .action span{
+			font-weight: 600;
+			color: #fff;
+			transform: rotate(270deg);
+			position: absolute;
+			top: 10%;
+			width: 140px;
+			left: -30%;
+			height: 90px;
+		}
+		.slide-content{
+			display: block;
+			width: 710px;
+			padding: 40px;
+			color: #fff;
+		}
+		.active{
+			width: 80%;
+		}
+		.active a.action{
+			display: none;
+		}
+		@media screen AND (max-width: 480px){
+			.slides{
+				display: initial;
+			}
+			.slide{
+				width: 100% !important;
+				margin-bottom: 15px;
+				height: auto;
+				border-radius: 10px;
+			}
+			.slide-conten{
+				width: 100% !important;
+				padding: 25px;
+				font-size: 95%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="container-slides">
+			<ul class="slides">
+				<li class="slide active brand-1">
+					<a href="#" class="action">
+						<span>Section Title 1</span>
+					</a>
+					<div class="slide-content">
+						<h2>title 1</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae quis sunt accusantium, ducimus soluta, voluptatum enim ipsam. Voluptatibus unde ad perferendis, ipsa. Ipsam tenetur, sunt minus, voluptatum enim ex.</p>
+					</div>
+				</li>
+
+				<li class="slide brand-2">
+					<a href="#" class="action">
+						<span>Section Title 2</span>
+					</a>
+					<div class="slide-content">
+						<h2>title 2</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae quis sunt accusantium, ducimus soluta, voluptatum enim ipsam. Voluptatibus unde ad perferendis, ipsa. Ipsam tenetur, sunt minus, voluptatum enim ex.</p>
+					</div>
+				</li>
+
+				<li class="slide brand-3">
+					<a href="#" class="action">
+						<span>Section Title 3</span>
+					</a>
+					<div class="slide-content">
+						<h2>Section title 3</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae quis sunt accusantium, ducimus soluta, voluptatum enim ipsam. Voluptatibus unde ad perferendis, ipsa. Ipsam tenetur, sunt minus, voluptatum enim ex.</p>
+					</div>
+				</li>
+
+				<li class="slide brand-4">
+					<a href="#" class="action">
+						<span>Section Title 4</span>
+					</a>
+					<div class="slide-content">
+						<h2>Section title 4</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae quis sunt accusantium, ducimus soluta, voluptatum enim ipsam. Voluptatibus unde ad perferendis, ipsa. Ipsam tenetur, sunt minus, voluptatum enim ex.</p>
+					</div>
+				</li>
+
+				<li class="slide brand-5">
+					<a href="#" class="action">
+						<span>Section Title 5</span>
+					</a>
+					<div class="slide-content">
+						<h2>Section title 5</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis recusandae quis sunt accusantium, ducimus soluta, voluptatum enim ipsam. Voluptatibus unde ad perferendis, ipsa. Ipsam tenetur, sunt minus, voluptatum enim ex.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../jQuery/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".action").click(function(e){
+				e.preventDefault();
+
+				$(".slide").removeClass("active");
+				var slide = $(this).closest(".slide");
+				slide.addClass("active");
+			});
+		});
+
+		checkWidth =  function(){
+			var windowSize = $(window).width();
+			if(windowSize > 480){
+				var slideWidth = $(".active").width();
+				$(".slide-content").css(
+				{
+					"width": slideWidth+"px"
+				});
+			}
+		}
+
+		$(window).resize(function(){
+			checkWidth();
+			clearTimeout(window.resizedFinished);
+			windowSize.resizedFinished = setTimeout(checkWidth, 500);
+		});
+	</script>
+</body>
+</html>

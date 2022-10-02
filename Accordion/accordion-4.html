@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-width: 100vh;
+			background-color: #bedfe8;
+		}
+		.accordion{
+			max-width: 60%;
+			margin-top: 100px;
+		}
+		.accordion .contentbox{
+			position: relative;
+			margin: 10px 20px;
+		}
+		.accordion .contentbox .label{
+			position: relative;
+			padding: 10px;
+			background-color: #2694af;
+			font-size: 25px;
+			color: #fff;
+			cursor: pointer;
+		}
+		.accordion .contentbox .label::before{
+			content: '+';
+			position: absolute;
+			font-weight: 700;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			font-size: 1.5rem;
+		}
+		.accordion .contentbox.active .label::before{
+			content: '-';
+		}
+		.accordion .contentbox .content{
+			position: relative;
+			position: 10px;
+			background-color: #fff;
+			height: 0;
+			overflow: hidden;
+			transition: 0.5s;
+			overflow-y: auto;
+		}
+		.accordion .contentbox.active .content{
+			height: 150px;
+			position: 10px;
+		}
+		.accordion .contentbox .content p{
+			padding: 20px;
+			font-size: 17px;
+		}
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<div class="contentbox">
+			<div class="label">List One</div>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error saepe cum velit laudantium provident fugiat consectetur molestiae omnis numquam quasi aliquam quam vitae cumque, odio voluptas voluptate autem dicta.</p>
+			</div>
+		</div>
+
+		<div class="contentbox">
+			<div class="label">List Two</div>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error saepe cum velit laudantium provident fugiat consectetur molestiae omnis numquam quasi aliquam quam vitae cumque, odio voluptas voluptate autem dicta.</p>
+			</div>
+		</div>
+
+		<div class="contentbox">
+			<div class="label">List Three</div>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error saepe cum velit laudantium provident fugiat consectetur molestiae omnis numquam quasi aliquam quam vitae cumque, odio voluptas voluptate autem dicta.</p>
+			</div>
+		</div>
+
+		<div class="contentbox">
+			<div class="label">List Four</div>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error saepe cum velit laudantium provident fugiat consectetur molestiae omnis numquam quasi aliquam quam vitae cumque, odio voluptas voluptate autem dicta.</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const accordion = document.getElementsByClassName('contentbox');
+		for(i = 0; i<accordion.length; i++){
+			accordion[i].addEventListener('click',function(){
+				this.classList.toggle('active')
+			});
+		}
+	</script>
+</body>
+</html>

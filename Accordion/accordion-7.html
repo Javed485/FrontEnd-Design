@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: sans-serif;
+			background-color: #34495e;
+			color: #fff;
+		}
+		.accordion{
+			width: 90%;
+			max-width: 1000px;
+			margin: 6rem auto;
+		}
+		.accordion-item{
+			background-color: #fff;
+			color: #111;
+			margin: 1rem 0;
+			border-radius: 0.5rem;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,.25);
+		}
+		.accordion-item-header{
+			padding: 0.5rem 3rem 0.5rem 1rem;
+			min-height: 3.5rem;
+			line-height: 1.25rem;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+		}
+		.accordion-item-header::after{
+			content: '\002B';
+			font-size: 2rem;
+			position: absolute;
+			right: 1rem;
+			transition: transform 0.2s ease-in-out;
+		}
+		.accordion-item-header.active::after{
+			content: '\2212';
+		}
+		.accordion-item-body{
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+		.content{
+			padding: 1rem;
+			line-height: 1.5rem;
+			border-top: 2px solid;
+			border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="accordion">
+		<div class="accordion-item">
+			<div class="accordion-item-header">
+				What is Web Development ?
+			</div>
+			<div class="accordion-item-body">
+				<div class="content">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quo consequatur magnam sapiente neque nam, sed omnis autem impedit quis molestias alias magni laborum eaque recusandae consectetur cum tempore culpa.
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<div class="accordion-item-header">
+				What is Web Development ?
+			</div>
+			<div class="accordion-item-body">
+				<div class="content">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quo consequatur magnam sapiente neque nam, sed omnis autem impedit quis molestias alias magni laborum eaque recusandae consectetur cum tempore culpa.
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<div class="accordion-item-header">
+				What is Web Development ?
+			</div>
+			<div class="accordion-item-body">
+				<div class="content">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quo consequatur magnam sapiente neque nam, sed omnis autem impedit quis molestias alias magni laborum eaque recusandae consectetur cum tempore culpa.
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<div class="accordion-item-header">
+				What is Web Development ?
+			</div>
+			<div class="accordion-item-body">
+				<div class="content">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quo consequatur magnam sapiente neque nam, sed omnis autem impedit quis molestias alias magni laborum eaque recusandae consectetur cum tempore culpa.
+				</div>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<div class="accordion-item-header">
+				What is Web Development ?
+			</div>
+			<div class="accordion-item-body">
+				<div class="content">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, quo consequatur magnam sapiente neque nam, sed omnis autem impedit quis molestias alias magni laborum eaque recusandae consectetur cum tempore culpa.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+		accordionItemHeaders.forEach(accordionItemHeader => {
+			accordionItemHeader.addEventListener("click", event => {
+				accordionItemHeader.classList.toggle("active");
+				const accordionItemBody = accordionItemHeader.nextElementSibling;
+				if(accordionItemHeader.classList.contains("active")){
+					accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+				}else{
+					accordionItemBody.style.maxHeight = 0;
+				}
+			});
+		});
+	</script>
+</body>
+</html>

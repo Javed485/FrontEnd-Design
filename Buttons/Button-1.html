@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Button</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #262626;
+		}
+		.center{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.pulse{
+			width: 150px;
+			height: 150px;
+			background-color: #ff6d4a;
+			border-radius: 50%;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			line-height: 150px;
+			font-family: sans-serif;
+			text-transform: uppercase;
+			animation: animate 3s linear infinite;
+		}
+		@keyframes animate {
+			0%{
+				box-shadow: 0 0 0 0 rgba(255,109,74,0.7), 0 0 0 0 rgba(255,109,74,0.7);
+			}
+			40%{
+				box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 0 rgba(255,109,74,0.7);
+			}
+			80%{
+				box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);
+			}
+			100%{
+				box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="circle">
+		<div class="pulse">button</div>
+	</div>
+</body>
+</html>

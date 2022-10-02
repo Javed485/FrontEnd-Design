@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			background-color: #ccc;
+		}
+		.center{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.page{
+			width: 350px;
+			height: 550px;
+			padding: 30px;
+			background-color: #fff;
+			border-left: 20px solid #ff2929;
+			transform: rotate(-45deg) skewX(10deg) scale(.8);
+			box-shadow: -50px 50px 50px rgba(0,0,0,0.5);
+		}
+		.page p{
+			margin: 0;
+			padding: 0;
+			text-align: justify;
+			font-size: 14px;
+		}
+		.page h1{
+			margin: 0 0 20px 0;
+			padding: 0;
+			text-align: center;
+			font-size: 25px;
+			content: #9e9e9e;
+			text-transform: capitalize;
+		}
+		.page:before{
+			content: '';
+			width: 30px;
+			height: 100%;
+			background-color: #8a0e0e;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: skewY(-45deg) translate(-50px,-36px);
+		}
+		.page:after{
+			content: '';
+			width: 100%;
+			height: 30px;
+			background-color: #ccc;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: skewX(-45deg) translate(-5px,30px);
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<div class="page">
+			<h1>mohammad javed</h1>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident commodi officiis ipsa illo voluptate sunt aspernatur, in autem quisquam laudantium sint aut esse beatae obcaecati pariatur fugit id. Veritatis iusto dicta sit atque ipsa animi voluptatibus quo reiciendis eius error, excepturi quam in odit perspiciatis sapiente laborum nobis odio. Necessitatibus quam esse perspiciatis itaque, nobis fugiat dolor provident repellat et aperiam. Esse voluptatem aperiam, perspiciatis exercitationem necessitatibus, numquam possimus sequi enim fugit, ut illum animi nostrum pariatur atque dolorem doloremque error eum eaque vero dicta iure nemo, quasi praesentium facilis deleniti? Officia dolore illum quaerat deleniti optio voluptates, molestiae fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolores quos sit quibusdam illum similique deserunt accusamus quod suscipit voluptatem. </p><br>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum non odit, amet voluptatem ipsa velit voluptates inventore laudantium iste laboriosam dolorum nesciunt consequatur fuga doloremque provident soluta, culpa, officia explicabo reprehenderit, dicta aliquid? Id alias ut quisquam blanditiis repellat quia illum consectetur deleniti doloremque excepturi impedit fugiat enim quos nihil quas cupiditate, assumenda magni suscipit labore, iure eligendi. Veritatis iste, iusto repudiandae nostrum odit rerum, atque totam aliquid non voluptates porro deserunt accusantium officiis facilis labore in repellendus blanditiis laboriosam. Quia aut accusamus dignissimos impedit consequatur, eos temporibus assumenda quo non reiciendis nam dolore debitis ea voluptate exercitationem consequuntur ad?</p>
+		</div>
+	</div>
+</body>
+</html>
