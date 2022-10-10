@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
     <title>Calculator | Dark and Light Mode</title>
     <style>
         *{
@@ -165,6 +166,12 @@
         .btn strong:nth-child(1){
             display: block;
         }
+        .btn strong i{
+            color: #fff;
+        }
+        body.light .btn strong i{
+            color: #333;
+        }
         body.light .btn strong:nth-child(1){
             display: none;
         }
@@ -175,8 +182,8 @@
 </head>
 <body>
     <div class="btn">
-        <strong>Dark</strong>
-        <strong>Light</strong>
+        <strong><i class="fa-regular fa-sun"></i></strong>
+        <strong><i class="fa-regular fa-moon"></i></strong>
     </div>
     <div class="container">
         <form class="calculator" name="calc">

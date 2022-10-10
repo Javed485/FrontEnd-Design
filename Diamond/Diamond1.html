@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #262626;
+        }
+        .diamond{
+            width: 190px;
+            height: 109px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .diamond::before,
+        .diamond::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+        }
+        .diamond::before{
+            transform: rotate(60deg);
+        }
+        .diamond::after{
+            transform: rotate(-60deg);
+        }
+        .diamond,
+        .diamond::before,
+        .diamond::after{
+            background: transparent;
+            border: 1px solid #fff;
+            background-color: rgba(48, 141, 255, 0.5);
+        }
+        span{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        span:nth-child(1){
+            top: -4px;
+            left: -4px;
+        }
+        span:nth-child(2){
+            top: -4px;
+            right: -4px;
+        }
+        span:nth-child(3){
+            bottom: -4px;
+            left: -4px;
+        }
+        span:nth-child(4){
+            bottom: -4px;
+            right: -4px;
+        }
+        span:nth-child(5){
+            bottom: -60px;
+            left: calc(50% - 4px);
+        }
+        span:nth-child(6){
+            top: -60px;
+            right: calc(50% - 6px);
+        }
+    </style>
+</head>
+<body>
+    <div class="diamond">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
